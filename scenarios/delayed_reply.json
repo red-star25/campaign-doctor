@@ -1,0 +1,33 @@
+{
+  "scenario_id": "delayed_reply",
+  "description": "Synthetic incident on 2026-10-27 UTC. The prospect replied at 09:58, the follow-up went out at 10:00, and the reply notification was processed at 10:02. The date is a stand-in so the clock times can be real ISO-8601 timestamps.",
+  "events": [
+    {
+      "event_id": "evt_initial_email",
+      "campaign_id": "camp_synthetic",
+      "lead_id": "lead_synthetic",
+      "type": "INITIAL_EMAIL_SENT",
+      "occurred_at": "2026-10-27T09:00:00Z",
+      "observed_at": "2026-10-27T09:00:00Z",
+      "metadata": {"channel": "email"}
+    },
+    {
+      "event_id": "evt_prospect_reply",
+      "campaign_id": "camp_synthetic",
+      "lead_id": "lead_synthetic",
+      "type": "PROSPECT_REPLIED",
+      "occurred_at": "2026-10-27T09:58:00Z",
+      "observed_at": "2026-10-27T10:02:00Z",
+      "metadata": {"channel": "email", "source": "webhook"}
+    },
+    {
+      "event_id": "evt_followup_sent",
+      "campaign_id": "camp_synthetic",
+      "lead_id": "lead_synthetic",
+      "type": "FOLLOWUP_SENT",
+      "occurred_at": "2026-10-27T10:00:00Z",
+      "observed_at": "2026-10-27T10:00:00Z",
+      "metadata": {"channel": "email"}
+    }
+  ]
+}

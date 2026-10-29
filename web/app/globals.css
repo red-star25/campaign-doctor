@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans-plex), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif-news), "Iowan Old Style", Palatino, Georgia, serif;
+  --font-mono: var(--font-mono-plex), ui-monospace, "SFMono-Regular", monospace;
+
+  --color-paper: #f3f0e8;
+  --color-raised: #faf8f4;
+  --color-ink: #1b1916;
+  --color-muted: #3f3a34;
+  --color-line: #e2dbd0;
+  --color-line-strong: #cfc6b8;
+  --color-pine: #1e4a43;
+  --color-pine-soft: #e6f0ed;
+  --color-copper: #8d4b32;
+  --color-copper-soft: #f6ebe4;
+  --color-amber: #8a5b16;
+  --color-amber-soft: #f7efd9;
+  --color-sea: #23415f;
+  --color-sea-soft: #e7eef5;
+}
+
+@layer base {
+  html {
+    background: var(--color-paper);
+  }
+
+  body {
+    text-rendering: optimizeLegibility;
+  }
+
+  button,
+  summary {
+    cursor: pointer;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details[open] .details-chevron {
+    transform: rotate(180deg);
+  }
+
+  .details-chevron {
+    transition: transform 150ms ease;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-pine);
+    outline-offset: 2px;
+  }
+}
